@@ -551,7 +551,7 @@ Record results in the "Knowledge checks" section of `docs/progress.md`.
 When I end a session ("закончили" or "wrap up"), in addition to the global wrap-up ritual:
 
 1. Propose `docs/progress.md` updates, each with linked evidence.
-2. List 2–3 English issues from the session with better phrasing, as candidates for `private/technical-english.md`. I write the entries myself.
+2. Fill in `private/technical-english.md` with the session's English issues (Watchlist or Recurring patterns). I read each corrected sentence and confirm or reject it.
 3. Point out any engineering log entry worth writing, without writing its reasoning.
 
 ---
