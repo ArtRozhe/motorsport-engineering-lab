@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Project ---
+
+# IDE state (WebStorm/PyCharm)
+.idea/
+
+# Raw datasets are never committed; provenance is documented in data/README.md
+data/*
+!data/README.md
+
+# Personal notes, never committed (see CLAUDE.md)
+private/
