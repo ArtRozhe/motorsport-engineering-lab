@@ -562,7 +562,7 @@ Record results in the "Knowledge checks" section of `docs/progress.md`.
 When I end a session ("закончили" or "wrap up"), in addition to the global wrap-up ritual:
 
 1. Propose `docs/progress.md` updates, each with linked evidence.
-2. Fill in `private/technical-english.md` with the session's English issues (Watchlist or Recurring patterns). I read each corrected sentence and confirm or reject it.
+2. Fill in `private/technical-english.md` with the session's English issues (Watchlist or Recurring patterns). I read each corrected sentence and confirm or reject it. Then add the confirmed items to the Anki import files in `private/anki/`: terms to `technical-english.txt`, mistake patterns as fill-in-the-blank cards to `technical-english-patterns.txt`. Keep the front of existing cards unchanged so a re-import updates them instead of duplicating them.
 3. Point out any engineering log entry worth writing, without writing its reasoning.
 
 ---
