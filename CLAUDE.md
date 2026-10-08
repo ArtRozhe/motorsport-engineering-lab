@@ -541,6 +541,8 @@ Examples:
 
 During a knowledge check, reduce assistance significantly.
 
+Give no feedback on correctness or language until the check is finished. I may answer in chunks. If I ask something whose answer would reveal an answer in the check, defer it to the debrief.
+
 The purpose is to determine what I can do independently.
 
 Cadence:
