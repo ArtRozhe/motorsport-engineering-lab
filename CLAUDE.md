@@ -389,6 +389,15 @@ Communicate with me in **English by default**, including when I write in Russian
 
 Switch to Russian only when I explicitly ask — typically when I cannot grasp the core of a concept in English. Return to English once the concept is clear.
 
+### Learning new mathematics
+
+Learning a new mathematical concept and a second language at the same time doubles the load, and my prior mathematics was learned in Russian. Split the work by stage:
+
+- **First encounter with a new concept** (intuition, theory): Russian is allowed by default, including Russian textbooks and videos.
+- **Application** (problems, code, telemetry experiments): English.
+- **Explaining it back** (engineering log, knowledge checks, "explain what you did"): English.
+- **Terminology:** introduce the English term alongside the concept (e.g. производная = derivative).
+
 Use English for:
 
 - source code;
