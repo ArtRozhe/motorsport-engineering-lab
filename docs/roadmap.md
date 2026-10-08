@@ -126,6 +126,40 @@ Independently take two real laps and:
 6. identify where time was gained or lost;
 7. explain the process and its limitations.
 
+### Plan
+
+Planned after the [Phase 0 baseline](progress.md#phase-0-baseline--2026-10-06-to-2026-10-08). Each step answers a question about real data; the mathematics is introduced where the data needs it.
+
+**Dataset:** human laps from [Assetto Corsa Gym](https://huggingface.co/datasets/dasgringuen/assettoCorsaGym) (CC BY 4.0), in MoTeC `.ld` format. Several drivers lapped the same car and track, which allows lap-to-lap and driver-to-driver comparison. It is simulator data: methods transfer to real cars, conclusions about vehicle behaviour do not. Real F1 data (OpenF1 / FastF1) is kept as the unfamiliar-data test at the end of the phase.
+
+| # | Step | Baseline gap addressed |
+|---|------|------------------------|
+| 1 | Working Python project setup: packaging, pytest, first test | — |
+| 2 | Obtain the dataset, document it in `data/README.md`, identify the processing done by the source and the parser | Data policy |
+| 3 | Raw inspection: timestamps, sampling intervals, per-channel sample rates, gaps, duplicates, units | Sampling period vs frequency, timestamps |
+| 4 | Longitudinal acceleration from speed: forward vs central differences, effect of resolution | Meaning of the derivative, finite differences, quantisation noise |
+| 5 | Distance from speed by numerical integration, compared with the lap distance channel; differentiate it back as a self-check | Integration as accumulated area, trapezoidal rule |
+| 6 | Track map from position; distances between samples as vectors | Vectors, distance between two positions |
+| 7 | Synchronise two laps on distance with linear interpolation; lap delta; where time is gained or lost | Phase 1 target outcome |
+
+Linear interpolation is pulled forward from Phase 2 because lap synchronisation depends on it. Trigonometry, frame rotation and periodic signals stay in Phase 2.
+
+Motorsport reading (lap structure, braking, corner entry, apex, exit) runs alongside steps 3–7 rather than as a separate block.
+
+The estimate is 5–6 weeks at the current time budget.
+
+### Resources
+
+First encounter with a concept may use Russian sources; application and explanation are in English.
+
+| Step | Concept | Resource |
+|------|---------|----------|
+| 3 | Sampling, quantisation | S. W. Smith, *The Scientist and Engineer's Guide to Digital Signal Processing* (free at dspguide.com), ch. 3 |
+| 4–5 | Derivative and integral, intuition | Я. Б. Зельдович, *Высшая математика для начинающих и её приложения к физике*, chapters on derivatives and integrals; 3Blue1Brown, *Essence of Calculus* (video), ch. 1–8 |
+| 4–5, 7 | Numerical methods in Python | Kong, Siauw, Bayen, *Python Programming and Numerical Methods* (free at pythonnumericalmethods.studentorg.berkeley.edu), ch. 20 (differentiation), 21 (integration), 17 (interpolation) |
+| 6 | Vectors | 3Blue1Brown, *Essence of Linear Algebra* (video), ch. 1–2 |
+| 3–7 | Racecar data practice | J. Segers, *Analysis Techniques for Racecar Data Acquisition* (SAE) |
+
 ---
 
 ## Phase 2 — From telemetry to analysis
